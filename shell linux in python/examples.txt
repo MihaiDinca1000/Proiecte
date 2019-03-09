@@ -1,0 +1,58 @@
+unix> ls
+shell.py
+test
+
+unix> cd test
+unix> ls
+a.txt
+b.txt
+
+unix> cp a.txt c
+unix> ls
+a.txt
+b.txt
+c
+
+unix> mv c c.txt
+unix> mkdir test1
+unix> mkdir test2
+unix> ls
+a.txt
+b.txt
+c.txt
+test1
+test2
+
+unix> cp a.txt b.txt test1
+unix> ls
+a.txt
+b.txt
+c.txt
+test1
+test2
+
+unix> rm c.txt
+unix> ls
+a.txt
+b.txt
+test1
+test2
+
+unix> ls test1 test2
+test1:
+a.txt
+b.txt
+
+test2:
+
+unix> rm test2
+rm: test2: [Errno 1] Operation not permitted: 'test2'
+unix> rm -R test2
+unix> ls
+a.txt
+b.txt
+test1
+
+unix> rm test1/a.txt test1/b.txt
+unix> rm -R test1
+unix> exit

@@ -1,0 +1,19 @@
+øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
+
+Calculator: Dinca Mihai 1231 F Fils
+
+
+!. In primal rand am impoeratat si installât bibliotecilefs, cowsay si math
+
+2. Am facut cu comanda npm init json-ul iar apoi cu functia JSON.parse(fs.readFileSync('package.json', 'utf8')); am putut sa-l citesc direct in linia de comanda(depinde daca o apelez) impreuna cu comenzile pe care pot sa le execut si cu cowsay.
+
+3. Am facut functiile pe care calculatorul meu poate sa le execute
+
+4. Am facut o functie pe care am numit-o parseArguments care pune pe al 3-lea argument din sitaxa "node main.js functie" apelul de functie pe care il dau si o exectuta. 
+
+5.Functia parse int stie ce functie sa ia datorita if-ul facut la linia 53: 
+if (argumentPassed == "add") {
+
+6. La sfarsit am facut apelul de functie: parseArguments();
+
+7. Consider ca program are un flow efficient si este user de urmarit codul.

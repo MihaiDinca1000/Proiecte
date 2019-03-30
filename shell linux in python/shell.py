@@ -272,6 +272,8 @@ def main():
                 mv(params)
             elif cmd == "rm":
                 rm(params)
+            elif cmd == "cat":
+                cat(params)
 
             # or finish the program if user typed 'exit'
             elif cmd == "exit":

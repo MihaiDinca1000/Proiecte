@@ -1,5 +1,6 @@
 from random import randint
 from time import time
+import re
 
 '''
     JOCUL BULLS AND COWS !
@@ -18,7 +19,6 @@ Did someone make a code with that in mind? I couldn't figure a way to make it ri
 
 linia 50 pentru verificare !!!!
 '''
-
 
 
 
@@ -46,30 +46,41 @@ if __name__=="__main__":
           "      *daca ai inimerit un numar dar nu si pozitia este bulls\n"
           "      *daca ai inimerit un numar dar si pozitia este vaca")
 
-    guess_number = str(randint(1_000, 10_000))
-    print(guess_number)
+    guess_number = str(randint(1000, 10000))
+    # print(guess_number)
     tries = 0
     status = True
     t0 = time()
+
     while(status):
+        
         input_number = input('ghiceste numarul: ')
-        cows, bulls = guess(guess_number)
-        tries +=1
-        if input_number == 'papa':
+
+        if re.search('[a-zA-Z]', input_number):
+            print('your are stupid, this is not a number !!! Malparido ...')
+            continue #aici poti sa-l faci tu sa continue
+        elif len(input_number) != 4:
+            print("The number has not the required length, please read the rules!")
+            break
+        
+        if input_number == '0000':
+            print("You stop the game here")
             break
 
+        cows, bulls = guess(guess_number)
+        tries +=1
+
+        
+        
+        t1 = time()
+        t10 = t1-t0
         if  cows == 4:
             print('bravo ai castigat')
             print('ai avut {} incercari'.format(tries))
-            print
             status = False
-        if type(input_number) != int:
-            print('Esti prost, acesta nu este un numar !!! Malparido ...')
-            break
+            print('Ai rezolvat problema in: {} secunde, numarul era: {}'.format(t10,guess_number))            
 
-    t1 = time()
-    t10 = t1-t0
-    print('Ai rezolvat problema in: {} secunde numarul era: {}'.format(t10,guess_number))
+
 
 
 

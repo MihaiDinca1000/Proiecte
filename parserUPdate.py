@@ -8,8 +8,7 @@ from pathlib import Path
 def copydirectories(input_dir, output_dir, ignore_dir):
 	if os.path.exists(output_dir): 
 		dirlist = os.path.isdir(output_dir)
-		if not dirlist:
-		 
+		if not dirlist:		 
 			os.rmdir(output_dir)
 		else:
 			shutil.rmtree(output_dir)
